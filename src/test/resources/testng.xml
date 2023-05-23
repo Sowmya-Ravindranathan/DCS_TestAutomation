@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests" thread-count="2">
+
+    <listeners>
+        <listener class-name ="utils.core.Listener"></listener>
+    </listeners>
+
+     <test name="AndroidTC - Handling Scroll gesture and pop up"  >
+         <parameter name="platform" value="Android"/>
+         <parameter name="deviceName" value="Pixel6Pro"/>
+         <parameter name="platformVersion" value="13.0"/>
+               <classes>
+                    <class name="tests.android.UserRegistrationTest"></class>
+                </classes>
+        </test>
+
+    <test name="IOS - Handling Scroll gesture and pop up"  >
+        <parameter name="platform" value="iOS"/>
+        <parameter name="deviceName" value="iPhone 14 Pro"/>
+        <parameter name="platformVersion" value="16.2"/>
+        <classes>
+            <class name="tests.ios.AlertsAndPopupTest"></class>
+        </classes>
+    </test>
+
+    <test name="Network Connection Test on the ADB devices"  >
+
+        <classes>
+            <class name="tests.android.NetworkConnectionTest"></class>
+        </classes>
+    </test>
+
+
+</suite>
