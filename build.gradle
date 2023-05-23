@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation group: 'org.testng', name: 'testng', version: '7.5.1'
+    implementation group: 'io.appium', name: 'java-client', version: '8.4.0'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.7.2'
+    implementation group: 'com.aventstack', name: 'extentreports', version: '5.0.9'
+    implementation group: 'commons-io', name: 'commons-io', version: '2.11.0'
+}
+
+test {
+    useTestNG() {
+    useDefaultListeners = true
+    suites "src/test/resources/testng.xml"
+    }
+}
