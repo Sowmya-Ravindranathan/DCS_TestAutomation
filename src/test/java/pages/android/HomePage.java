@@ -42,13 +42,13 @@ public class HomePage extends AndroidActions {
 
 
     public HomePage startMessaging(){
-        wait(6);
+        waitUntilVisibilityOfElement(startButton);
         startButton.click();
         return new HomePage(driver);
     }
 
     public HomePage changeCountry(String country) {
-        wait(3);
+        waitUntilVisibilityOfElement(CountryDropdown);
         CountryDropdown.click();
         wait(6);
         scrollToText(country);
@@ -63,7 +63,7 @@ public class HomePage extends AndroidActions {
     }
 
     public HomePage clickPopUpOKButton(){
-        wait(3);
+        waitUntilVisibilityOfElement(invalidNumberOK);
         invalidNumberOK.click();
         return new HomePage(driver);
     }
@@ -74,7 +74,7 @@ public class HomePage extends AndroidActions {
     }
 
     public String checkErrorMessage(){
-        wait(3);
+        waitUntilVisibilityOfElement(titleTextSorry);
         waitForElementTextToVisible(titleTextSorry, "Sorry");
         String Message = errorMessage.getText();
         return Message;
