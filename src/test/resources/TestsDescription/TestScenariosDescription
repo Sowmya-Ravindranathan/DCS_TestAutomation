@@ -1,0 +1,68 @@
+
+
+
+Android :
+
+
+Test: UserRegistrationTest
+Method: verifyErrorMessageOnInvalidPhoneNumber
+
+1. Login to Telegram app
+2. Click on start messaging
+3. User will land on the your phone number page
+4. Click on country box to change country
+5. Select "Germany" which is not visible. So scroll to the Germany and click
+6. Clear the phone number field and provide an invalid phone number digit
+7. Click OK
+8. A popup message is displayed with invalid number message
+9. Click OK
+10. Again Clear the phone number field and provide an invalid phone number with right digit
+11. A popup message to confirm number. And click Yes
+12. Now again, A popup message is displayed with invalid number message
+13. Verify error message displayed with an expected message
+
+
+Test: NetworkConnectionTest
+Method 1 : getConnectedWifiNetworkNames
+
+Pre-requisite: Connect two or more devices or emulators
+
+1. Get connected devices through adb 
+2. Get WiFi network names
+
+
+Method 2: getWifiNotConnectedDevicesUDID
+
+Pre-requisite: Connect two or more devices or emulators
+
+1. Get connected devices through adb 
+2. Get devices Not connected to Wifi
+
+Test: NetworkConnectionTest
+Method 3: disableWifiConnectionToDevices
+
+Pre-requisite: Connect two or more devices or emulators
+
+1. Get connected devices through adb 
+2. Diable wifi on the Wifi connected devices
+
+
+
+
+IOS:
+
+Test: AlertsAndPopupTest
+Method: verifyAlertsAndPopupHandling
+
+1. Login to UIKitCatalog app
+2. Click on "Alerts view" menu
+3. Click on "Text Entry" menu
+4. A Popup is dispalyed with text field
+5. Enter text in the Text field and click Ok
+6. Click on Confirm/Cancel Menu
+7. A label with the  confirm and cancel button is dispalyed
+8. Verify the text on the pop-up dispalyed
+9. Click on confirm
+
+
+

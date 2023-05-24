@@ -20,14 +20,12 @@ public class NetworkConnectionTest {
     public void getConnectedWifiNetworkNames() {
         HashMap<String, String> deviceWifi = page.getConnectedWifiNamesOfAllDevices(devices);
         System.out.println("Devices connected on Wifi " + deviceWifi);
-        //log("Devices connected on Wifi " + deviceWifi);
     }
 
     @Test
-    public void getWifiConnectedDevicesUDID() {
+    public void getWifiNotConnectedDevicesUDID() {
         List<String> noWifiDevices = page.getDevicesListIfWifiIsNotConnected(devices);
         System.out.println(noWifiDevices);
-        //log("Devices not connected on Wifi " + noWifiDevices);
     }
 
     @Test
